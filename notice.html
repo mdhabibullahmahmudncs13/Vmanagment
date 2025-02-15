@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #333, #4b0082, #800080, #7b68ee, #4682b4);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .notice {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ffeb3b;
+            border-left: 5px solid #fbc02d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notice</h1>
+        <div class="notice">
+            <p>This is an important notice for all team members. Please read it carefully.</p>
+        </div>
+    </div>
+</body>
+</html>

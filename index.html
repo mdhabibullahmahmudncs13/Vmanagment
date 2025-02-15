@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome & Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #333, #4b0082, #800080, #7b68ee, #4682b4);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .login-container {
+            background-color: #ffffff3a;
+            padding: 56px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.136);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #09cbe0;
+            border-radius: 5px;
+        }
+        .login-container input[type="submit"] {
+            width: 103.4%;
+            padding: 10px;
+            background: linear-gradient(to right, red, blue);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container input[type="submit"]:hover {
+            background-color: #45a04900;
+        }
+    </style>
+    <script>
+        const users = [
+            { username: "cs2304105", password: "cs2304105" },
+            { username: "cs2304053", password: "cs2304053" },
+            { username: "cs2304118", password: "cs2304118" },
+            { username: "cs2304023", password: "cs2304023" },
+            { username: "cs2304064", password: "cs2304064" },
+            { username: "cs2304056", password: "cs2304056" },
+            { username: "cs2304083", password: "cs2304083" },
+            { username: "cs2304112", password: "cs2304112" },
+            { username: "cs2304107", password: "cs2304107" },
+            { username: "cs2304066", password: "cs2304066" },
+            { username: "cs2304120", password: "cs2304120" },
+            { username: "Vikings Crew", password: "valhalla" },
+            { username: "The Cross Guild", password: "clown" },
+            { username: "Samurai's of Wano", password: "uranus" },
+            { username: "Strawhat Pirates", password: "luffy" },
+            { username: "The Monks", password: "moon" },
+            { username: "Donquixote Pirates", password: "doffy" },
+            { username: "Sailors of Laughtale", password: "onepiece" },
+            { username: "Holy Kinghts", password: "worldgov" },
+            { username: "The Warlords", password: "sea" }
+        ];
+
+        function validateLogin(event) {
+            event.preventDefault();
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+
+            const user = users.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                if (username === "cs2304105") {
+                    window.location.href = "cs2304105.html";
+                } else if (username === "cs2304053") {
+                    window.location.href = "cs2304053.html";
+                }else if (username === "cs2304118") {
+                    window.location.href = "cs2304118.html";
+                }else if (username === "cs2304023") {
+                    window.location.href = "cs2304023.html";
+                }else if (username === "cs2304064") {
+                    window.location.href = "cs2304064.html";
+                }else if (username === "cs2304056") {
+                    window.location.href = "cs2304056.html";
+                }else if (username === "cs2304083") {
+                    window.location.href = "cs2304083.html";
+                }else if (username === "cs2304112") {
+                    window.location.href = "cs2304112.html";
+                }else if (username === "cs2304107") {
+                    window.location.href = "cs2304107.html";
+                }else if (username === "cs2304066") {
+                    window.location.href = "cs2304066.html";
+                }else if (username === "cs2304120") {
+                    window.location.href = "cs2304120.html";
+                }
+                 else {
+                    alert("Login successful!");
+                }
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Welcome to Dig The Data Team</h2>
+        <form onsubmit="validateLogin(event)">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
