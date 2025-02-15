@@ -54,6 +54,16 @@
         .login-container input[type="submit"]:hover {
             background-color: #45a04900;
         }
+        .register-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #09cbe0;
+            text-decoration: none;
+        }
+        .register-link:hover {
+            text-decoration: underline;
+        }
     </style>
     <script>
         const users = [
@@ -127,10 +137,11 @@
     <div class="login-container">
         <h2 style="text-align: center;">Welcome to Dig The Data Team</h2>
         <form onsubmit="validateLogin(event)">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="username" placeholder="Username(cs2304000)" required>
+            <input type="password" name="password" placeholder="Password(cs2304000)" required>
             <input type="submit" value="Login">
         </form>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7L-hEAPnO6xElVaGkZKu8WUo86hyCzEmVg8iG4RkKPgK7xQ/viewform?usp=sharing" class="register-link">Register</a>
     </div>
 </body>
 </html>
