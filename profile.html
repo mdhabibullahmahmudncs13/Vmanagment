@@ -10,8 +10,6 @@
             background: linear-gradient(45deg, #333, #4b0082, #800080, #7b68ee, #4682b4);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
-           
-          
         }
 
         @keyframes gradient {
@@ -80,6 +78,27 @@
         }
         .member p {
             color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .member {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header nav {
+                float: none;
+                text-align: center;
+            }
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+            .member {
+                width: 100%;
+            }
         }
     </style>
 </head>
